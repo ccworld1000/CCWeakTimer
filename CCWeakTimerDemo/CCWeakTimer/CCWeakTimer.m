@@ -14,9 +14,9 @@
 #endif
 
 #if OS_OBJECT_USE_OBJC
-    #define ms_release_gcd_object(object)
+    #define cc_release_gcd_object(object)
 #else
-    #define ms_release_gcd_object(object) dispatch_release(object)
+    #define cc_release_gcd_object(object) dispatch_release(object)
 #endif
 
 @interface CCWeakTimer ()
@@ -43,7 +43,7 @@
 
 @synthesize tolerance = _tolerance;
 
-- (id)initWithTimeInterval:(NSTimeInterval)timeInterval
+- (instancetype)initWithTimeInterval:(NSTimeInterval)timeInterval
                     target:(id)target
                   selector:(SEL)selector
                   userInfo:(id)userInfo
@@ -75,7 +75,7 @@
     return self;
 }
 
-- (id)init
+- (instancetype)init
 {
     return [self initWithTimeInterval:0
                                target:nil
@@ -108,7 +108,7 @@
 {
     [self invalidate];
 
-    ms_release_gcd_object(_privateSerialQueue);
+    cc_release_gcd_object(_privateSerialQueue);
 }
 
 - (NSString *)description
@@ -186,7 +186,7 @@
         dispatch_source_t timer = self.timer;
         dispatch_async(self.privateSerialQueue, ^{
             dispatch_source_cancel(timer);
-            ms_release_gcd_object(timer);
+            cc_release_gcd_object(timer);
         });
     }
 }
