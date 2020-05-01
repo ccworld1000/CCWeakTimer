@@ -14,8 +14,6 @@ FOUNDATION_EXPORT double CCWeakTimerVersionNumber;
 //! Project version string for CCWeakTimer.
 FOUNDATION_EXPORT const unsigned char CCWeakTimerVersionString[];
 
-NS_ASSUME_NONNULL_BEGIN
-
 /**
  `CCWeakTimer` behaves similar to an `NSTimer` but doesn't retain the target.
  This timer is implemented using GCD, so you can schedule and unschedule it on arbitrary queues (unlike regular NSTimers!)
@@ -81,5 +79,3 @@ NS_ASSUME_NONNULL_BEGIN
 - (id)userInfo;
 
 @end
-
-NS_ASSUME_NONNULL_END

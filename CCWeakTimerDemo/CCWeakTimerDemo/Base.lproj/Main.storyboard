@@ -15,24 +15,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ng5-nU-5JJ">
-                                <rect key="frame" x="138" y="245" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ng5-nU-5JJ">
+                                <rect key="frame" x="0.0" y="244" width="414" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="PFr-Ul-W3N"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5A3-lf-5Rv">
-                                <rect key="frame" x="188" y="412" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5A3-lf-5Rv">
+                                <rect key="frame" x="232" y="331" width="167" height="30"/>
                                 <state key="normal" title="Fire"/>
                                 <connections>
                                     <action selector="fireTimer" destination="BYZ-38-t0r" eventType="touchUpInside" id="AMe-z5-Xtr"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AFk-Di-sH4">
-                                <rect key="frame" x="68" y="413" width="34" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AFk-Di-sH4">
+                                <rect key="frame" x="15" y="331" width="167" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="yuu-1C-UfL"/>
+                                </constraints>
                                 <state key="normal" title="Start"/>
                                 <connections>
                                     <action selector="toggleTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7dP-5I-vOJ"/>
@@ -40,6 +43,18 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Ng5-nU-5JJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="42T-YR-UyQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5A3-lf-5Rv" secondAttribute="trailing" constant="15" id="77V-a9-5oE"/>
+                            <constraint firstItem="5A3-lf-5Rv" firstAttribute="top" secondItem="Ng5-nU-5JJ" secondAttribute="bottom" constant="66" id="B6e-JY-NsY"/>
+                            <constraint firstItem="Ng5-nU-5JJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="Hlc-Tz-mTB"/>
+                            <constraint firstItem="5A3-lf-5Rv" firstAttribute="leading" secondItem="AFk-Di-sH4" secondAttribute="trailing" constant="50" id="Yyx-wA-WZX"/>
+                            <constraint firstItem="AFk-Di-sH4" firstAttribute="top" secondItem="Ng5-nU-5JJ" secondAttribute="bottom" constant="66" id="ZNI-l9-Spo"/>
+                            <constraint firstItem="AFk-Di-sH4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="dVh-YL-LOm"/>
+                            <constraint firstItem="5A3-lf-5Rv" firstAttribute="width" secondItem="AFk-Di-sH4" secondAttribute="width" id="kSL-Jk-eRQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ng5-nU-5JJ" secondAttribute="trailing" id="qf2-cZ-YLl"/>
+                            <constraint firstItem="5A3-lf-5Rv" firstAttribute="height" secondItem="AFk-Di-sH4" secondAttribute="height" id="sSr-cI-i8s"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
