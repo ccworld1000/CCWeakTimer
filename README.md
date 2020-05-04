@@ -49,7 +49,7 @@ Simply add the files `CCWeakTimer.h` and `CCWeakTimer.m` to your project.
 
 ## Screenshots
 
-![s](https://raw.github.com/ccworld1000/CCWeakTimer/master/Screenshot/s.png)
+![s](https://raw.github.com/ccworld1000/CCWeakTimer/master/Screenshots/s.png)
 
 
 ## Compatibility
